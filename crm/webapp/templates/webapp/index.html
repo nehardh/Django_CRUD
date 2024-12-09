@@ -1,21 +1,99 @@
 {% extends "webapp/base.html" %}
 
 {% block content %}
+<body>
+    <style>
+        body {
+            background-color: #f8f9fa; /* Light background for a clean look */
+            font-family: Arial, sans-serif;
+        }
 
-    <body>
-        <br>
-        <br>
+        .hero-section {
+            background-image: url(''); /* Replace with a relevant image URL */
+            background-size: cover;
+            background-position: center;
+            color: black;
+            text-align: center;
+            padding: 60px 20px;
+        }
 
-        <div class="text-center">
+        .hero-section h3 {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
 
-            <h3>ProjectX... Management at it's finest</h3>
-            <br>
-            <h4>Keep track of your records effectively !</h4>
-            <hr>
+        .hero-section h4 {
+            font-size: 1.5rem;
+            margin-top: 10px;
+        }
 
-            <a href="{% url 'register' %}" class="btn btn-primary">Create your Account</a>
+        .btn-primary {
+            font-size: 1.2rem;
+            padding: 10px 20px;
+        }
+
+        .features-section {
+            margin: 50px auto;
+            text-align: center;
+        }
+
+        .features {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .feature-card {
+            background: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            max-width: 300px;
+            text-align: center;
+        }
+
+        .feature-card h5 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .feature-card p {
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        .cta {
+            margin-top: 30px;
+        }
+    </style>
+
+    <div class="hero-section">
+        <h3>FlowHub: Empower your productivity with smarter management. </h3>
+        <h4>Organize your tasks and track progress seamlessly.</h4>
+        <a href="{% url 'register' %}" class="btn btn-primary">Create Your Account</a>
+    </div>
+
+    <div class="features-section">
+        <h4>Why Choose FlowHub?</h4>
+        <div class="features">
+            <div class="feature-card">
+                <h5>Effortless Management</h5>
+                <p>Track, manage, and organize your records seamlessly.</p>
+            </div>
+            <div class="feature-card">
+                <h5>Secure Data</h5>
+                <p>Your data is protected with top-notch security measures.</p>
+            </div>
+            <div class="feature-card">
+                <h5>Customizable</h5>
+                <p>Tailor the platform to meet your unique business needs.</p>
+            </div>
         </div>
-    </body>
 
+        <div class="cta">
+            <a href="{% url '' %}" class="btn btn-primary">Learn More</a>
+        </div>
+    </div>
+</body>
 {% endblock %}
 
