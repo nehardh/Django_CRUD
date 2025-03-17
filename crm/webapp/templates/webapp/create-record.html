@@ -1,7 +1,5 @@
 {% extends "webapp/base.html" %}
-
 {% load crispy_forms_tags %}
-
 {% block content%}
     <body>
         <div>
@@ -10,13 +8,9 @@
             <hr>
             <form autocomplete="off" method="POST">
                 {% csrf_token %} <!--#Used for avoiding csrf attacks in the webpage-->
-
                 {{form|crispy}}
-
                 <br>
-
                 <button type="submit" class="btn btn-primary w-100 btn-blck p-2" >Create record</button>
-
             </form>
         </div>
     </body>

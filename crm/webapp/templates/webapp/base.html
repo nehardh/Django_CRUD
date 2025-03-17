@@ -1,24 +1,19 @@
 {% load static %}
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CRUD_system</title>
-
+    <title>FlowHub</title>
     <link rel="stylesheet" href="https://bootswatch.com/5/flatly/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css"> <!--Everytime statci css file must be below bootstrap or bootwatch css link-->
-
 </head>
 <body>
     <!-- Create Navbar here -->
     {% include 'webapp/navbar.html'%}
-
     <div class="container">
         <br>
-
         <!-- Notifiaction messages  -->
         {% for message in messages %}
             {% if message.level == DEFAULT_MESSAGE_LEVELS.SUCCESS %}
@@ -27,16 +22,11 @@
                 </p>
             {% endif %}
         {% endfor %}
-
         {% block content%}
             <br>
-
             <!-- Block content gives us the space where we can the extra content for the unique pages -->
-
         {% endblock %}
-
     </div>
-
     <script src="{% static 'js/app.js'%}"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
